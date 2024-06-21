@@ -1,0 +1,6 @@
+# Latest Versions will be installed
+# pip install -r requirements.txt
+Flask
+numpy
+pandas
+scikit-learn

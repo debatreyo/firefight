@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+      url_for('name of the function inside which the input values will be accessed')
+    -->
+    <form action="{{url_for('model_predict')}}" method="post">
+      <label for="Temperature">Temperature (°C)</label>
+      <input
+        type="text"
+        name="Temperature"
+        id="Temperature"
+        ,
+        placeholder="Maxiumum Noon temperature?"
+        required="required"
+      />
+
+      <br />
+
+      <label for="RH">RH (%)</label>
+      <input
+        type="text"
+        name="RH"
+        id="RH"
+        placeholder="Relative humidity?"
+        required="required"
+      />
+
+      <br />
+
+      <label for="Ws">WS (km/h)</label>
+      <input
+        type="text"
+        name="Ws"
+        id="Ws"
+        placeholder="Wind speed?"
+        required="required"
+      />
+
+      <br />
+
+      <label for="Rain">Rain (mm)</label>
+      <input
+        type="text"
+        name="Rain"
+        id="Rain"
+        placeholder="Total rainfall?"
+        required="required"
+      />
+
+      <br />
+
+      <label for="FFMC">FFMC</label>
+      <input
+        type="text"
+        name="FFMC"
+        id="FFMC"
+        placeholder="Fine Fuel Moisture Code index?"
+        required="required"
+      />
+
+      <br />
+
+      <label for="DMC">DMC</label>
+      <input
+        type="text"
+        name="DMC"
+        id="DMC"
+        placeholder="Duff Moisture Code index?"
+        required="required"
+      />
+
+      <br />
+
+      <label for="ISI">ISI</label>
+      <input
+        type="text"
+        name="ISI"
+        id="ISI"
+        placeholder="Initial Spread index?"
+        required="required"
+      />
+
+      <br />
+
+      <label for="Classes">Class</label>
+      <input
+        type="text"
+        name="Classes"
+        id="Classes"
+        placeholder="1: Fire, 0: No Fire"
+        required="required"
+      />
+
+      <br />
+
+      <label for="Region">Region</label>
+      <input
+        type="text"
+        name="Region"
+        id="Region"
+        placeholder="1: Siddi-Bel Abbes, 0: Bejaia"
+        required="required"
+      />
+
+      <br />
+
+      <button type="submit">Predict FWI</button>
+    </form>
+
+    <h3>The predicted Forest Weather Index (FWI) is {{prediction}}</h3>
+  </body>
+</html>
+
+<!--
+
+Label tag ->
+`for` should be same as `id` of its Input tag
+
+Input tag ->
+`id` should match `for` of its corresponding Label
+`name` will be used in application.py file to 
+refer to the value entered by user in this input field.
+
+-->
