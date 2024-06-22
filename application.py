@@ -21,8 +21,8 @@ application = Flask(__name__)
 app = application # assign to variable with shorter name for easier working
 
 # IMPORT MODEL & SCALAR OBJECT
-scaler_path = Path(r"D:\End-to-End ML Project\models\scaler.pkl")
-model_path = Path(r"D:\End-to-End ML Project\models\lin_reg.pkl")
+scaler_path = Path(r"D:\Forest Fire ML Project\models\scaler.pkl")
+model_path = Path(r"D:\Forest Fire ML Project\models\lin_reg.pkl")
 
 scaler = pickle.load(open(scaler_path, "rb"))
 model = pickle.load(open(model_path, "rb"))
